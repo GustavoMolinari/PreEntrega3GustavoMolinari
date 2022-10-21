@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.cuerpo{
+    background-color:cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 120px 1fr 1fr 1fr 50px;
+    grid-template-areas:
+    "header header header"
+    "productos productos aside"
+    "productos productos aside"
+    "productos productos aside"
+    "footer footer footer"
+    ;
+}
+.header{
+    grid-area: header;
+    background: cadetblue;
+}
+.seccion1{
+    grid-area: productos;
+}
+.seccion2{
+    grid-area: productos;
+}
+.seccion3{
+    grid-area: productos;
+}
+.footer{
+    grid-area: footer;
+}
+.header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__item{
+    display:inline-block;
+    margin: 5px 2px 5px 2px;
+    padding: 5px 5px 5px 5px;
+    border-top: solid 2px rebeccapurple;
+    border-bottom: solid 2px rebeccapurple;
+    border-left: solid 2px rebeccapurple;
+    border-right: solid 2px rebeccapurple;
+    border-radius: 5px;
+    color: rebeccapurple;
+}
+.main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+.seccion1, .seccion2, .seccion3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.seccion1__titulo, .seccion2__titulo, .seccion3__titulo{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: x-large;
+    text-decoration: underline;
+    color: white;
+}
+.contenedor__index--img1{
+    height: 449px;
+    width: 800px;
+    position: relative;
+    background-image: url(../img/productos/index/main/camara.jpg);
+    background-repeat: no-repeat;
+}
+.contenedor__index--img2{
+    height: 449px;
+    width: 800px;
+    position: relative;
+    background-image: url(../img/productos/index/main/portero_visor_wifi.jpg);
+    background-repeat: no-repeat;
+}
+.contenedor__index--img3{
+    height: 449px;
+    width: 800px;
+    position: relative;
+    background-image: url(../img/productos/index/main/lamparas.jpg);
+    background-repeat: no-repeat;
+}
+.seccion1__lista, .seccion2__lista, .seccion3__lista{
+    position: absolute;
+    bottom: 0px;
+}
+.seccion1__item, .seccion2__item, .seccion3__item{
+    display: inline-block;
+    margin: 5px 2px 5px 2px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    text-decoration: underline;
+}
+.footer{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: darkslateblue;
+}
+.footer__titulo{
+    margin-bottom: 10px;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+.footer__datos{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
