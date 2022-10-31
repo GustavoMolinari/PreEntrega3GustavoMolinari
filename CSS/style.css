@@ -6,33 +6,42 @@
     background-color:cadetblue;
     font-family: Arial, Helvetica, sans-serif;
 }
-.grid{
+.grilla{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 120px 1fr 1fr 1fr 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px auto auto auto 50px;
     grid-template-areas:
-    "header header header"
-    "productos productos aside"
-    "productos productos aside"
-    "productos productos aside"
-    "footer footer footer"
+    "header header"
+    "contenido aside"
+    "contenido aside"
+    "contenido aside"
+    "footer footer"
     ;
+    justify-content: start;
 }
-.header{
+.a{
     grid-area: header;
     background: cadetblue;
+    grid-row: 1/2;
 }
-.seccion1{
-    grid-area: productos;
+.b{
+    grid-area: contenido;
+    grid-row: 2/3;
 }
-.seccion2{
-    grid-area: productos;
+.c{
+    grid-area: contenido;
+    grid-row: 3/4;
 }
-.seccion3{
-    grid-area: productos;
+.d{
+    grid-area: contenido;
+    grid-row: 4/5;
 }
-.footer{
+.aside{
+    grid-area: aside;
+}
+.e{
     grid-area: footer;
+    grid-row: 5/6;
 }
 .header{
     display: flex;
@@ -49,45 +58,39 @@
     border-left: solid 2px rebeccapurple;
     border-right: solid 2px rebeccapurple;
     border-radius: 5px;
-    color: rebeccapurple;
+    transition: all;
 }
-.main{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: space-around;
+.header__item:hover{
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: large;
+    font-weight: bold;
+    border-top: solid 3px rebeccapurple;
+    border-bottom: solid 3px rebeccapurple;
+    border-left: solid 3px rebeccapurple;
+    border-right: solid 3px rebeccapurple;
+    color: white;
 }
+a{
+    text-decoration: none;
+}
+
 .seccion1, .seccion2, .seccion3{
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .seccion1__titulo, .seccion2__titulo, .seccion3__titulo{
+    display: block;
     margin-left: 5px;
     margin-bottom: 5px;
     font-size: x-large;
     text-decoration: underline;
     color: white;
 }
-.contenedor__index--img1{
+.contenedor__index--img1, .contenedor__index--img2, .contenedor__index--img3{
     height: 449px;
     width: 800px;
     position: relative;
-    background-image: url(../img/productos/index/main/camara.jpg);
-    background-repeat: no-repeat;
-}
-.contenedor__index--img2{
-    height: 449px;
-    width: 800px;
-    position: relative;
-    background-image: url(../img/productos/index/main/portero_visor_wifi.jpg);
-    background-repeat: no-repeat;
-}
-.contenedor__index--img3{
-    height: 449px;
-    width: 800px;
-    position: relative;
-    background-image: url(../img/productos/index/main/lamparas.jpg);
-    background-repeat: no-repeat;
 }
 .seccion1__lista, .seccion2__lista, .seccion3__lista{
     position: absolute;
@@ -99,6 +102,11 @@
     padding: 5px 5px 5px 5px;
     color: white;
     text-decoration: underline;
+}
+.formulario{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .footer{
     display: flex;
