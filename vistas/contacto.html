@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="shortcut icon" href="../img/logo-favicon.png">
+    <link rel="shortcut icon" href="../img/logo/logo-favicon.png">
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body class="cuerpo">
     <div class="grilla">
         <!--Inicio del Header-->
-        <div class="a">
+        <div class="contacto__a">
             <header class="header">
                 <h3 class="header__logo"><img src="../img/logo/logo3.png" alt="Logo"></h3>
                 <nav class="header__navegador">
@@ -28,65 +28,65 @@
         <hr>
         <!--Inicio del cuerpo principal-->
         <main class="main">
-            <!--Titulo de la página-->
-            <section class="seccion1">
-                <h4 class="seccion1__titulo">Formulario de contacto</h4>
-            </section>
-            <!--Inicio del formulario-->
-            <section>
-                <form action="" method="post" enctype="text/plain">
-                    <div class="b">
-                        <article>
+            <div class="contacto__b">
+                <!--Titulo de la página-->
+                <div>
+                    <section class="main__seccion">
+                        <h4 class="main__titulo">Formulario de contacto</h4>
+                    </section>
+                </div>
+                <!--Inicio del formulario-->
+                <section>
+                    <form action="" method="post" enctype="text/plain">
+                        <article class="main__seccion">
                             <fieldset class="formulario">
-                                <legend>Datos</legend>
+                                <legend class="formulario__titulo">Datos</legend>
                                 <div>
                                     <p>
-                                        <label for="nombre">Nombre y Apellido:</label>
-                                        <input type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" required>
+                                        <label class="formulario__label" for="nombre">Nombre y Apellido:</label>
+                                        <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" required>
                                     </p>
                                     <p>
-                                        <label for="email">Email:</label>
-                                        <input type="email" name="email" id="email" placeholder="Introduzca su email" required>
+                                        <label class="formulario__label" for="email">Email:</label>
+                                        <input class="formulario__input" type="email" name="email" id="email" placeholder="Introduzca su email" required>
                                     </p>
                                     <p>
-                                        <label for="tel">WhatsApp:</label>
-                                        <input type="tel" name="tel" id="tel" placeholder="Introduzca su teléfono" required>
-                                    </p>
-                                </div>
-                            </fieldset>
-                        </article><br>
-                    </div>
-                    <div class="c">
-                        <article>
-                            <fieldset class="formulario">
-                                <legend>Tipo de consulta</legend>
-                                <div>
-                                    <p>Quiero recibir información de:</p>
-                                    <p>
-                                        <label for="precios">Precios</label>
-                                        <input type="checkbox" name="precios" id="precios">
-                                    </p>
-                                    <p>
-                                        <label for="instructivos">Instructivos</label>
-                                        <input type="checkbox" name="instructivos" id="instructivos">
+                                        <label class="formulario__label" for="tel">WhatsApp:</label>
+                                        <input class="formulario__input" type="tel" name="tel" id="tel" placeholder="Introduzca su teléfono" required>
                                     </p>
                                 </div>
                             </fieldset>
                         </article>
-                    </div>
-                    <div class="d">
-                        <p>
-                            <input type="reset" value="Vaciar formulario">
-                            <input type="submit" value="Enviar información">
-                        </p>
-                    </div>
-                </form>
-            </section>
+                        <article class="main__seccion">
+                            <fieldset class="formulario">
+                                <legend class="formulario__titulo">Tipo de consulta</legend>
+                                <div>
+                                    <p class="formulario__label">Quiero recibir información de:</p>
+                                    <p>
+                                        <label class="formulario__label" for="precios">Precios</label>
+                                        <input class="formulario__checkbox" type="checkbox" name="precios" id="precios">
+                                    </p>
+                                    <p>
+                                        <label class="formulario__label" for="instructivos">Instructivos</label>
+                                        <input class="formulario__checkbox" type="checkbox" name="instructivos">
+                                    </p>
+                                </div>
+                            </fieldset>
+                        </article>
+                        <div>
+                            <p>
+                                <input class="formulario__boton" type="reset" value="Vaciar formulario">
+                                <input class="formulario__boton" type="submit" value="Enviar información">
+                            </p>
+                        </div>
+                    </form>
+                </section>
+            </div>      
         </main>
         <!--Fin del cuerpo principal-->
         <hr>
         <!--Inicio del pie de pagina-->
-        <div class="e">
+        <div class="contacto__c">
             <footer class="footer">
                 <h3 class="footer__titulo">Contacto:</h3>
                 <p class="footer__datos"><strong>WhatsApp:</strong> <span>11 2467-9198</span></p>

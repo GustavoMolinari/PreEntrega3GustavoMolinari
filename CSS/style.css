@@ -1,12 +1,11 @@
+/*inicio de parámetros de raíz*/
 *{
     margin: 0px;
     padding: 0px;
 }
-.cuerpo{
-    background-color:cadetblue;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.grilla{
+/*fin de parámetros de raíz*/
+/*inicio de grilla del index*/
+.index__grilla{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 120px auto auto auto 50px;
@@ -17,32 +16,62 @@
     "contenido aside"
     "footer footer"
     ;
-    justify-content: start;
 }
-.a{
+.index__a{
     grid-area: header;
     background: cadetblue;
     grid-row: 1/2;
 }
-.b{
+.index__b{
     grid-area: contenido;
     grid-row: 2/3;
 }
-.c{
+.index__c{
     grid-area: contenido;
     grid-row: 3/4;
 }
-.d{
+.index__d{
     grid-area: contenido;
     grid-row: 4/5;
 }
-.aside{
+.index__aside{
     grid-area: aside;
+    grid-row: 2/5;
 }
-.e{
+.index__e{
     grid-area: footer;
     grid-row: 5/6;
 }
+/*fin de grilla del index*/
+/*inicio de grilla de contacto*/
+.contacto__grilla{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px auto 50px;
+    grid-template-areas:
+    "header header"
+    "contacto aside"
+    "footer footer"
+    ;
+}
+.contacto__a{
+    grid-area: header;
+    background: cadetblue;
+    grid-row: 1/2;
+}
+.contacto__b{
+    grid-area: contenido;
+    grid-row: 2/3;
+}
+.contacto__aside{
+    grid-area: aside;
+}
+.contacto__c{
+    grid-area: footer;
+    grid-row: 3/4;
+}
+/*fin de grilla de contacto*/
+/*inicio de estilos del header*/
 .header{
     display: flex;
     flex-flow: row nowrap;
@@ -71,42 +100,37 @@
     border-right: solid 3px rebeccapurple;
     color: white;
 }
-a{
+header a{
     text-decoration: none;
 }
-
-.seccion1, .seccion2, .seccion3{
+/*fin de estilos del header*/
+/*inicio de estilos del body*/
+.cuerpo{
+    background-color:cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.seccion1__titulo, .seccion2__titulo, .seccion3__titulo{
+.main__seccion{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main__titulo{
     display: block;
     margin-left: 5px;
     margin-bottom: 5px;
-    font-size: x-large;
+    font-size: xx-large;
     text-decoration: underline;
     color: white;
 }
-.contenedor__index--img1, .contenedor__index--img2, .contenedor__index--img3{
-    height: 449px;
-    width: 800px;
-    position: relative;
-}
-.seccion1__lista, .seccion2__lista, .seccion3__lista{
-    position: absolute;
-    bottom: 0px;
-}
-.seccion1__item, .seccion2__item, .seccion3__item{
+.main__item{
     display: inline-block;
     margin: 5px 2px 5px 2px;
     padding: 5px 5px 5px 5px;
     color: white;
     text-decoration: underline;
-}
-.formulario{
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 .footer{
     display: flex;
@@ -127,3 +151,217 @@ a{
     margin-bottom: 5px;
     margin-left: 5px;
 }
+/*fin de estilos del body*/
+/*inicio del main del index*/
+.index__contenedor{
+    position: relative;
+}
+.index__lista{
+    position: absolute;
+    bottom: 0px;
+}
+/*fin del main del index*/
+/*inicio del main de contacto*/
+.formulario{
+    height: 120px;
+    width: 340px;
+    margin-left: 5px;
+    padding: 5px 5px 5px 5px;
+    border-top: solid 2px rebeccapurple;
+    border-bottom: solid 2px rebeccapurple;
+    border-left: solid 2px rebeccapurple;
+    border-right: solid 2px rebeccapurple;
+    border-radius: 5px;
+}
+.formulario__titulo{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+}
+.formulario__label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 100;
+    color: white;
+}
+.formulario__input{
+    width: 180px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-top: solid 2px rebeccapurple;
+    border-bottom: solid 2px rebeccapurple;
+    border-left: solid 2px rebeccapurple;
+    border-right: solid 2px rebeccapurple;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    transition: all;
+}
+.formulario__input:focus{
+    height: 22px;
+    width: 190px;
+    font-weight: 600;
+    background-color: rebeccapurple;
+    color: white;
+}
+.formulario__checkbox{
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.formulario__boton{
+    height: 25px;
+    width: 170px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top: solid 2px rebeccapurple;
+    border-bottom: solid 2px rebeccapurple;
+    border-left: solid 2px rebeccapurple;
+    border-right: solid 2px rebeccapurple;
+    border-radius: 5px;
+    font-weight: 700;
+    color: rebeccapurple;
+    transition: all;
+}
+.formulario__boton:hover{
+    height: 30px;
+    width: 175px;
+    margin-left: 2px;
+    margin-right: 0px;
+    font-size: large;
+    background-color: rebeccapurple;
+    color: white;
+}
+/*fin del main de contacto*/
+/*inicio del mediaquery para celulares*/
+@media screen and (min-width: 320px) {
+    /*inicio de grilla del index celulares*/
+    .index__grilla{
+        display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px auto auto auto auto 50px;
+    grid-template-areas:
+    "header"
+    "contenido"
+    "contenido"
+    "contenido"
+    "aside"
+    "footer"
+    ;
+    }
+    .index__a{
+        grid-area: header;
+        background: cadetblue;
+        grid-row: 1/2;
+    }
+    .index__b{
+        grid-area: contenido;
+        grid-row: 2/3;
+    }
+    .index__c{
+        grid-area: contenido;
+        grid-row: 3/4;
+    }
+    .index__d{
+        grid-area: contenido;
+        grid-row: 4/5;
+    }
+    .index__aside{
+        grid-area: aside;
+        grid-row: 5/6;
+    }
+    .index__e{
+        grid-area: footer;
+        grid-row: 6/7;
+    }
+    /*fin de grilla del index celulares*/
+    /*inicio de estilos del body celulares*/
+    .header{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .header__item{
+        display:inline-block;
+        margin: 5px 2px 5px 2px;
+        padding: 5px 5px 5px 5px;
+        border-top: solid 2px rebeccapurple;
+        border-bottom: solid 2px rebeccapurple;
+        border-left: solid 2px rebeccapurple;
+        border-right: solid 2px rebeccapurple;
+        border-radius: 5px;
+        transition: all;
+    }
+    .header__item:hover{
+        margin-left: 1px;
+        margin-right: 1px;
+        font-size: large;
+        font-weight: bold;
+        border-top: solid 3px rebeccapurple;
+        border-bottom: solid 3px rebeccapurple;
+        border-left: solid 3px rebeccapurple;
+        border-right: solid 3px rebeccapurple;
+        color: white;
+    }
+    header a{
+        text-decoration: none;
+    }
+    img{
+        width: 100%;
+    }
+    .main{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .main__seccion{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .main__titulo{
+        display: block;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        font-size: medium;
+        text-decoration: underline;
+        color: white;
+    }
+    .main__item{
+        display: block;
+        margin: 5px 2px 5px 2px;
+        padding: 5px 5px 5px 5px;
+        font-size: small;
+        color: white;
+        text-decoration: underline;
+    }
+    .footer{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: white;
+        background-color: darkslateblue;
+    }
+    .footer__titulo{
+        margin-bottom: 10px;
+        margin-left: 5px;
+        font-size: small;
+        text-decoration: underline;
+    }
+    .footer__datos{
+        font-size: x-small;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    /*fin de estilos del body celulares*/
+    
+}
+/*fin del mediaquery para celulares*/
